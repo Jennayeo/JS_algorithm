@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(word){
+                let answer;
+                let mid=Math.floor(word.length/2)
+                if(word.length%2==1) answer=word.substring(mid, mid+1); //단어 길이 홀수, substring: 사이의 단어 뽑아냄
+                else answer=word.substring(mid-1, mid+1); // book, mid=2, answer 1,2번째 answer=oo
+                return answer;
+            }; 
+        // 참고로 substr(2,4): 2번 인덱스로부터 4개를 뽑아내라
+        // substr(mid, 1): 홀수일때
+        // substr(mid-1, 2): 짝수일때
+
+        let word = "book";
+        console.log(solution(word));
+        </script>
+    </body>
+</html>

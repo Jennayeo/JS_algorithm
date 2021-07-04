@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(word){
+                let result = "";
+                for (let i of word) {
+                    let num=i.charCodeAt();
+                    if(num>=65 && num<=90) result+= i.toLowerCase()
+                    else result += i.toUpperCase()
+                }
+                return result;
+            };      
+
+        let word = "StuDY";
+        console.log(solution(word));
+        </script>
+    </body>
+</html>

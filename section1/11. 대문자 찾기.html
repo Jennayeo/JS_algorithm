@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(word){
+                let count = 0;
+                for (let i of word) {
+                    if (i == i.toUpperCase()) count++;
+                    // 또는 아스키코드 사용
+                    // 아스키코드 대문자: 65 - 90, 소문자: 97 - 122
+                    // let num = i.charCodeAt();
+                    // if(num>=65 && num<=90) count++;
+                }
+                return count;
+            };      
+
+        let word = "KorEaTimeGood";
+        console.log(solution(word));
+        </script>
+    </body>
+</html>

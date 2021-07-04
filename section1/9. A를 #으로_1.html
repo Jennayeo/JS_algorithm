@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(word){
+                let answer="";
+                for(let i of word){
+                    if (i == "A") answer+="#";
+                    else answer+=i;
+                }
+                return answer;
+            };           
+        let word = "BANANA";
+        console.log(solution(word));
+        </script>
+    </body>
+</html>

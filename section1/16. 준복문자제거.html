@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(word){
+                let answer = "";
+                for (let i=0; i<word.length; i++){
+                    // console.log(word[i], i, word.indexOf(word[i]))
+                    if (word.indexOf(word[i]) == i) answer += word[i];
+                }
+                return answer;
+            }; 
+
+        let word = "ksekkset";
+        console.log(solution(word));
+        </script>
+    </body>
+</html>
