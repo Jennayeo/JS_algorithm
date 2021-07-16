@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(word, subword){
+               let result = [];
+               let p =0;
+               console.log(word);
+               for (let i of word){
+                   if (i == subword) {
+                       p=0;
+                       result.push(p);
+                   }
+                   else {
+                       p++;
+                       result.push(p);
+                   }
+                //arr = 0;
+                   //for (let j in word) {
+                    //if (j != subword) arr++;
+                    //if (j == subword) result.push(arr); break;
+//if (j == subword) console.log("YES");
+                   }
+               console.log(result);
+                for (let i=word.length-1; i>=0; i--){
+                    if(word[i]==subword){
+                        p=0;
+                        //result.push(p);
+                    }
+                    else {
+                        p++;
+                        result[i]=Math.min(result[i],p);
+                    }
+                }
+            // 다른 방법
+            /*
+            let answer = "";
+            for(let x of str){
+                if(!isNaN(x))
+                    answer +=x;
+                }
+                return parseInt(answer);
+            */
+            return result;
+        };
+        let word = "teachermode";
+        let subword = "e";
+        console.log(solution(word, subword));
+        </script>
+    </body>
+</html>

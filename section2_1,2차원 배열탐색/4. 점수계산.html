@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(numbers){
+                let result = 0, cnt = 0;
+                for (let i of numbers) {
+                    if (i==1) {
+                        cnt++;
+                        result+=cnt;
+                    }
+                    else {cnt=0; result+=0;}
+            }; 
+            return result;
+        };
+        let numbers = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
+        console.log(solution(numbers));
+        </script>
+    </body>
+</html>

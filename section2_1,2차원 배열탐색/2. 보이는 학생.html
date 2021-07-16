@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(numbers){
+                let max = numbers[0];
+                let count = 1;
+                for (i = 1; i < numbers.length; i++) {
+                    if (max < numbers[i]) {
+                        count++;
+                        max = numbers[i];
+                    } 
+            }; 
+            console.log(max);
+            return count;
+        };
+        let numbers = [130, 135, 148, 140, 145, 150, 150, 153];
+        console.log(solution(numbers));
+        </script>
+    </body>
+</html>

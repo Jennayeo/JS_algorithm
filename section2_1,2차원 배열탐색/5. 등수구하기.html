@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(numbers){
+                let n = numbers.length;
+                let answer = Array.from({length:n}, () => 1);
+                // 길이가 n인 1을 담은 객체를 얉은 복사한다.
+                console.log(answer);
+                for(i = 0; i<n; i++){
+                    for(j = 0; j<n; j++){
+                        if(numbers[j]>numbers[i]) answer[i]++;
+                    }
+                }
+            return answer;
+        };
+        let numbers = [87, 89, 92, 100, 76];
+        console.log(solution(numbers));
+        </script>
+    </body>
+</html>

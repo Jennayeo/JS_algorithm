@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(word){
+               //word=word.toLowerCase().replace(/[a-z]/g, ''); // 소문자로 바꾸기, a-z문자들 삭제
+               result="";
+               word=word+" ";
+               count=1;
+               for (let i=0; i <word.length; i++) {
+                if (word[i] == word[i+1])
+                   count++;
+                else {
+                    result+=word[i];
+                //console.log(sum.count);
+                if(count>1) result+=String(count);
+                //result+=count;
+                count=1;
+               }}
+               //}
+               console.log(result);
+                //if (word[0]==0) word = word.replace(word[0],'');   
+                return result;  
+        };
+        let word = "KKHSSSSSSSE";
+        console.log(solution(word));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(word){
+               word=word.toLowerCase().replace(/[a-z]/g, ''); // 소문자로 바꾸기, a-z문자들 삭제
+               console.log(word);
+                if (word[0]==0) word = word.replace(word[0],'');     
+            return word;
+            // 다른 방법
+            /*
+            let answer = "";
+            for(let x of str){
+                if(!isNaN(x))
+                    answer +=x;
+                }
+                return parseInt(answer);
+            */
+        };
+        let word = "g0en2T0s8eSoft";
+        console.log(solution(word));
+        </script>
+    </body>
+</html>
